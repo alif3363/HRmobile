@@ -78,5 +78,8 @@ class Pegawai
     
     // Get a Single Post
     
+    public function create()
+    {
 
+    }
 }    
