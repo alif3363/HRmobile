@@ -1,7 +1,7 @@
 <?php
 class Database
 {
-    private $host = "172.17.0.6";
+    private $host = "172.17.0.3";
     private $username = "root";
     private $password = "Mysqlpsswd";
     private $dbname = "fin_pro";
