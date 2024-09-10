@@ -21,10 +21,11 @@ $posts = $post->sisacuti();
 // Get Rows Count
 //$rows = $posts->rowCount();
 $sisacuti = [
-    "id" => $post->id,
-    "category_id" => $post->pegawainama,
+    "pegawai_nip" => $post->pegawai_nip,
+    "pegawai_nama" => $post->pegawai_nama,
+ 
     ];
-
+ echo json_encode($sisacuti, JSON_PRETTY_PRINT);
 
 
 // Get Rows Count
@@ -46,6 +47,6 @@ $sisacuti = [
 //         ];
 //         array_push($postsArr, $postItem);
 //     } // Turn posts array into JSON and display it
-    echo json_encode($sisacuti, JSON_PRETTY_PRINT);
+   
 //}
 
