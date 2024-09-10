@@ -56,7 +56,7 @@ class Pegawai
         pembagian1 as p ON c.pembagian1_id = p.pembagian1_id
         LEFT JOIN
         izin as d ON c.pegawai_id = d.pegawai_id
-        WHERE d.izin_tgl > '2023-09-01' and p.pembagian1_id='4'
+        WHERE d.izin_tgl > '2024-02-29' and p.pembagian1_id='4'
         AND LEFT(pegawai_nip,2)='10'
         
         GROUP BY c.pegawai_nip
