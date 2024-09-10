@@ -74,7 +74,7 @@ class Pegawai
 
             $this->id = $post["pegawai_nip"];
             $this->categoryId = $post["pegawai_nama"];
-            $this->categoryName = $post["category_name"];
+            
          return true;
         } else {
             printf("Database Error: %s\n", $stmt->error);
