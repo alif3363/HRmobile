@@ -58,15 +58,15 @@ class Pegawai
         izin as d ON c.pegawai_id = d.pegawai_id
         WHERE d.izin_tgl > '2024-02-29' and p.pembagian1_id='4'
         AND LEFT(pegawai_nip,2)='10'
-        AND d.izin_jenis_id IN ('90','70') AND c.pgawai_id = ?
+        AND d.izin_jenis_id IN ('90','70') AND c.pegawai_id = ?
         GROUP BY c.pegawai_nip
         ORDER BY c.pegawai_nip ASC
-        LIMIT 6
+        LIMIT 1
         ";
 
         // Prepare Statement
         $stmt = $this->conn->prepare($query);
-         $stmt->bindParam(1, $this->id);
+         $stmt->bindParam(1, $this->pegawai_id);
         $stmt->execute();
         
         return $stmt;
