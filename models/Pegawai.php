@@ -72,8 +72,8 @@ class Pegawai
             // Get the post
             $post = $stmt->fetch(PDO::FETCH_ASSOC);
 
-            $this->pegawai_nip = $post["id"];
-            $this->pegawain_nama = $post["category_id"];
+            $this->id = $post["id"];
+            $this->category_id = $post["category_id"];
             
          return true;
         } else {
