@@ -66,13 +66,14 @@ class Pegawai
 
         // Prepare Statement
         $stmt = $this->conn->prepare($query);
-         $stmt->bindParam(1, $this->id);
+         
         
         if ($stmt->execute()) {
             // Get the category
             $post = $stmt->fetch(PDO::FETCH_ASSOC);
-
-            $this->id = $post["id"];
+             $this->pegawai_nip = $post["pegawai_nip"];
+            
+            
             return true;
         } else {
             printf("Database Error: %s\n", $stmt->error);
