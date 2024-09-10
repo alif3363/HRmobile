@@ -66,7 +66,7 @@ class Pegawai
 
         // Prepare Statement
         $stmt = $this->conn->prepare($query);
-         
+         $stmt->bindParam(1, $this->id);
         
         if ($stmt->execute()) {
             // Get the category
