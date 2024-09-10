@@ -14,33 +14,38 @@ $db = $database->connect();
 $post = new Pegawai($db);
 
 $post->id = isset($_GET["id"]) ? htmlspecialchars($_GET["id"]) : die();
+
+$post->sisacuti();
 $posts = $post->sisacuti();
 
 // Get Rows Count
-$rows = $posts->rowCount();
-
+//$rows = $posts->rowCount();
+$sisacuti = [
+    "id" => $post->pegawai_nip,
+    "category_id" => $post->pegawai_nama,
+    ];
 
 
 
 // Get Rows Count
-if ($rows > 0) {
-    // Posts Available
-    $postsArr = [];
+// if ($rows > 0) {
+//     // Posts Available
+//     $postsArr = [];
 
-    while ($row = $posts->fetch(PDO::FETCH_ASSOC)) {
-        extract($row);
+//     while ($row = $posts->fetch(PDO::FETCH_ASSOC)) {
+//         extract($row);
 
-        $postItem = [
-            "pegawai_nip" => $pegawai_nip,
-            "pegawai_nama" => $pegawai_nama,
-            "Departemen" => $departemen,
-            "Cuti_tetpakai" => $totcuti,
-            "Jatah_cuti" => $jatah_cuti,
-            "Sisa_cuti" => $sisa,
+//         $postItem = [
+//             "pegawai_nip" => $pegawai_nip,
+//             "pegawai_nama" => $pegawai_nama,
+//             "Departemen" => $departemen,
+//             "Cuti_tetpakai" => $totcuti,
+//             "Jatah_cuti" => $jatah_cuti,
+//             "Sisa_cuti" => $sisa,
 
-        ];
-        array_push($postsArr, $postItem);
-    } // Turn posts array into JSON and display it
-    echo json_encode($postsArr, JSON_PRETTY_PRINT);
-}
+//         ];
+//         array_push($postsArr, $postItem);
+//     } // Turn posts array into JSON and display it
+    echo json_encode($sisacuti, JSON_PRETTY_PRINT);
+//}
 
