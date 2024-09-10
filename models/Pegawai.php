@@ -6,7 +6,7 @@ class Pegawai
     
 
     // Post Properties
-    public $pegawai_nip;
+    public $id;
     public $pegawainama;
     public $jabatan;
     // Construct with Database
@@ -72,8 +72,8 @@ class Pegawai
             // Get the post
             $post = $stmt->fetch(PDO::FETCH_ASSOC);
 
-            $this->id = $post["id"];
-            $this->category_id = $post["category_id"];
+            $this->id = $post["pegawai_nip"];
+            $this->pegawainama = $post["pegawai_nama"];
             
          return true;
         } else {
