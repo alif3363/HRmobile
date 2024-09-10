@@ -74,7 +74,7 @@ class Pegawai
              $this->pegawai_nip = $post["pegawai_nip"];
             
             
-            return true;
+            return $this;
         } else {
             printf("Database Error: %s\n", $stmt->error);
             return false;
