@@ -61,24 +61,16 @@ class Pegawai
         AND d.izin_jenis_id IN ('90','70') 
         GROUP BY c.pegawai_nip
         ORDER BY c.pegawai_nip ASC
-        LIMIT 0,1
+        LIMIT 0,6
         ";
 
         // Prepare Statement
         $stmt = $this->conn->prepare($query);
-         $stmt->bindParam(1, $this->id);
+        $stmt->execute();
         
-        if ($stmt->execute()) {
-            // Get the category
-            $post = $stmt->fetch(PDO::FETCH_ASSOC);
-             $this->pegawai_nip = $post["pegawai_nip"];
-            
-            
-            return $this;
-        } else {
-            printf("Database Error: %s\n", $stmt->error);
-            return false;
-        }
+        return $stmt;
+        
+        
         
 
         
