@@ -20,12 +20,12 @@ $posts = $post->sisacuti();
 
 // Get Rows Count
 //$rows = $posts->rowCount();
-$sisacuti = [
-    "pegawai_nip" => $post->pegawai_nip,
-    "pegawai_nama" => $post->pegawai_nama,
+$sisacu = [
+    "pegawai_nip" => $post->pegawainip,
+    "pegawai_nama" => $post->pegawainama,
  
     ];
- echo json_encode($sisacuti, JSON_PRETTY_PRINT);
+ echo json_encode($sisacu, JSON_PRETTY_PRINT);
 
 
 // Get Rows Count
