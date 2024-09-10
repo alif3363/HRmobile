@@ -21,8 +21,8 @@ $posts = $post->sisacuti();
 // Get Rows Count
 //$rows = $posts->rowCount();
 $sisacuti = [
-    "id" => $post->pegawai_nip,
-    "category_id" => $post->pegawai_nama,
+    "id" => $post->id,
+    "category_id" => $post->pegawainama,
     ];
 
 
