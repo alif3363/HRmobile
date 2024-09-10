@@ -66,7 +66,7 @@ class Pegawai
 
         // Prepare Statement
         $stmt = $this->conn->prepare($query);
-         $stmt->bindParam(1, $this->pegawai_id);
+         $stmt->bindParam(1, $this->pegawai_nip);
         $stmt->execute();
         
         return $stmt;
