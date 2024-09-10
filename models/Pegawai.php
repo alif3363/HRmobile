@@ -6,7 +6,7 @@ class Pegawai
     
 
     // Post Properties
-    public $pegawai_id;
+    public $pegawai_nip;
     public $pegawainama;
     public $jabatan;
     // Construct with Database
