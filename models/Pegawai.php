@@ -72,7 +72,7 @@ class Pegawai
             // Get the category
             $post = $stmt->fetch(PDO::FETCH_ASSOC);
 
-            $this->pegawai_nip = $post["id"];
+            $this->id = $post["id"];
             return true;
         } else {
             printf("Database Error: %s\n", $stmt->error);
