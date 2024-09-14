@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>API Test</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <!-- (A) LOGIN -->
+    <form method="post" action="user-api.php">
+      <input type="text" name="req" value="in" readonly>
+      <input type="email" name="email" value="john@doe.com" required>
+      <input type="text" name="password" value="123456" required>
+      <input type="submit" value="1 - Login">
+    </form>
+
+    <!-- (B) ADD USER -->
+    <form method="post" action="user-api.php">
+      <input type="text" name="req" value="save" readonly>
+      <input type="email" name="email" value="jane@doe.com" required>
+      <input type="text" name="password" value="123456" required>
+      <input type="submit" value="2 - Add User">
+    </form>
+
+    <!-- (C) UPDATE USER -->
+    <form method="post" action="user-api.php">
+      <input type="text" name="req" value="save" readonly>
+      <input type="number" name="id" value="2" >
+      <input type="email" name="email" value="janezzzzzzz@doe.com" required>
+      <input type="text" name="password" value="12345654321" required>
+      <input type="submit" value="3 - Update User">
+    </form>
+
+    <!-- (D) GET USER -->
+    <form method="post" action="user-api.php">
+      <input type="text" name="req" value="get" >
+      <input type="text" name="id" value="10302" required>
+      <input type="number" name="ndkid" value="1" required>
+      <input type="submit" value="4 - Get User">
+    </form>
+
+    <!-- (E) DELETE USER -->
+    <form method="post" action="3-users-api.php">
+      <input type="text" name="req" value="del" readonly>
+      <input type="number" name="id" value="2" required>
+      <input type="submit" value="5 - Delete User">
+    </form>
+
+    <!-- (F) LOGOUT -->
+    <form method="post" action="user-api.php">
+      <input type="text" name="req" value="out" readonly>
+      <input type="submit" value="6 - Logout">
+    </form>
+  </body>
+</html>
