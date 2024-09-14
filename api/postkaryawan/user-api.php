@@ -1,5 +1,7 @@
 <?php
 // (A) LOAD USER LIBRARY
+header("Access-Control-Allow-Origin: *");
+header("Content-type: application/json");
 require "../../models/users-lib.php";
 
 // (B) STANDARD JSON RESPONSE
